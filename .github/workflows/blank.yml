@@ -46,5 +46,13 @@ jobs:
           pwd
           ls -l
           find
+
+      - name: Deploy to Render
+        run: |
+          curl -X POST "https://api.render.com/deploy/srv-csqe3sd6l47c73dsfphg?key=_ki6EKGqVhQ" \
+          -H "Content-Type: application/json" \
+          -d '{}'
+
+      
           echo Add other actions to build,
           echo test, and deploy your project.
